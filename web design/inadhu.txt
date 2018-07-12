@@ -1,0 +1,28 @@
+                 ASP.NET DB CONNECTIVITY
+
+STEP 1:Create a blank DB in microsoft access
+ 
+        Blank DB -DB name-path->save
+        Name,Rollno
+        Design view->delete ID
+        Table 1
+      
+     close DB
+STEP 2:open visual studio
+        
+      New project
+      Asp.net application
+      set path where access DB is stored
+      Default aspx file will get opened
+      In design view,drag and drop 2 label,2 textbox, 1           grid view,2 buttons from tool box
+      Rename label 1 as Name,Label2 as rollno
+      click Gridview choose datasource ->new Datascourse
+      ->database
+ 
+   New connection ->browse for the DB(access) and click    test connection ->test connection suceeded
+   Ok ->next ->select checkbox* ->test Query ->finish
+   Accessdatasource - properties -click insert query -give  INSERT command  ->INSERT INTO [TABLE] ([Name]:[Rollno])   values (@Name,@Rollno)
+   Add parameter -> Parameter Source ->control ->control ID
+   Name     Textbox1.Text    Rollno    textbox2.Text
+   Doubleclick Submit button ->Enter code ->accessdatasource1.Insert()
+   Double click clear Button ->Enter code ->Textbox1.Text="     " Textbox2.Text="  "
